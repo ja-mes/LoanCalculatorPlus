@@ -18,6 +18,7 @@
 		9B8329C91D63F3660008AA84 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8329C81D63F3660008AA84 /* MainTableViewController.swift */; };
 		9B8329CF1D63F5D10008AA84 /* AddTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8329CE1D63F5D10008AA84 /* AddTextField.swift */; };
 		9B8329D31D63F8C30008AA84 /* NavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8329D21D63F8C30008AA84 /* NavViewController.swift */; };
+		9B8329D51D64860D0008AA84 /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8329D41D64860D0008AA84 /* Loan.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		9B8329C81D63F3660008AA84 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		9B8329CE1D63F5D10008AA84 /* AddTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTextField.swift; sourceTree = "<group>"; };
 		9B8329D21D63F8C30008AA84 /* NavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavViewController.swift; sourceTree = "<group>"; };
+		9B8329D41D64860D0008AA84 /* Loan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 		9B8329C51D63F29E0008AA84 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9B8329D41D64860D0008AA84 /* Loan.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				9B8329C91D63F3660008AA84 /* MainTableViewController.swift in Sources */,
 				9B8329CF1D63F5D10008AA84 /* AddTextField.swift in Sources */,
 				9B8329971D638CCA0008AA84 /* AddViewController.swift in Sources */,
+				9B8329D51D64860D0008AA84 /* Loan.swift in Sources */,
 				9B8329951D638CCA0008AA84 /* AppDelegate.swift in Sources */,
 				9B8329D31D63F8C30008AA84 /* NavViewController.swift in Sources */,
 				9B83299D1D638CCA0008AA84 /* Amorization_Schedule.xcdatamodeld in Sources */,
@@ -453,6 +457,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Amorization Schedule/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Amorization-Schedule";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -466,6 +471,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Amorization Schedule/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Amorization-Schedule";
 				PRODUCT_NAME = "$(TARGET_NAME)";
