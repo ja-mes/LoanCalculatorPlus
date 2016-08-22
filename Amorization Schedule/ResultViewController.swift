@@ -33,10 +33,24 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        monthlyPayment.text = String(loan.payment_amount)
-        loanAmount.text = String(loan.amount)
-        numMonths.text = String(loan.payments)
-        interestRate.text = String(loan.interest)
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        
+        monthlyPayment.text = formatter.string(from: NSNumber(value: loan.payment_amount))
+        loanAmount.text = formatter.string(from: NSNumber(value: loan.amount))
+        
+        interestRate.text = "\(dblAsInt(val: loan.interest))%"
+        numMonths.text = dblAsInt(val: loan.payments)
+
+    }
+    
+    func dblAsInt(val: Double) -> String {
+        if floor(val) == val {
+            return "\(Int(val))"
+        } else {
+            return "\(val)"
+        }
+
     }
 
 }
