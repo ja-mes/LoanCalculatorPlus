@@ -15,10 +15,10 @@
 		9B8329A21D638CCA0008AA84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8329A01D638CCA0008AA84 /* LaunchScreen.storyboard */; };
 		9B8329AD1D638CCA0008AA84 /* Amorization_ScheduleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8329AC1D638CCA0008AA84 /* Amorization_ScheduleTests.swift */; };
 		9B8329B81D638CCA0008AA84 /* Amorization_ScheduleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8329B71D638CCA0008AA84 /* Amorization_ScheduleUITests.swift */; };
-		9B8329C91D63F3660008AA84 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8329C81D63F3660008AA84 /* MainTableViewController.swift */; };
 		9B8329CF1D63F5D10008AA84 /* AddTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8329CE1D63F5D10008AA84 /* AddTextField.swift */; };
 		9B8329D31D63F8C30008AA84 /* NavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8329D21D63F8C30008AA84 /* NavViewController.swift */; };
 		9B8329D51D64860D0008AA84 /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8329D41D64860D0008AA84 /* Loan.swift */; };
+		9BA08ECA1D668C700002717F /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA08EC91D668C700002717F /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,10 +53,10 @@
 		9B8329B31D638CCA0008AA84 /* Amorization ScheduleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Amorization ScheduleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B8329B71D638CCA0008AA84 /* Amorization_ScheduleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amorization_ScheduleUITests.swift; sourceTree = "<group>"; };
 		9B8329B91D638CCA0008AA84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9B8329C81D63F3660008AA84 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		9B8329CE1D63F5D10008AA84 /* AddTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTextField.swift; sourceTree = "<group>"; };
 		9B8329D21D63F8C30008AA84 /* NavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavViewController.swift; sourceTree = "<group>"; };
 		9B8329D41D64860D0008AA84 /* Loan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
+		9BA08EC91D668C700002717F /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				9B8329961D638CCA0008AA84 /* AddViewController.swift */,
-				9B8329C81D63F3660008AA84 /* MainTableViewController.swift */,
+				9BA08EC91D668C700002717F /* ResultViewController.swift */,
 				9B8329D21D63F8C30008AA84 /* NavViewController.swift */,
 			);
 			name = Controller;
@@ -298,9 +298,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B8329C91D63F3660008AA84 /* MainTableViewController.swift in Sources */,
 				9B8329CF1D63F5D10008AA84 /* AddTextField.swift in Sources */,
 				9B8329971D638CCA0008AA84 /* AddViewController.swift in Sources */,
+				9BA08ECA1D668C700002717F /* ResultViewController.swift in Sources */,
 				9B8329D51D64860D0008AA84 /* Loan.swift in Sources */,
 				9B8329951D638CCA0008AA84 /* AppDelegate.swift in Sources */,
 				9B8329D31D63F8C30008AA84 /* NavViewController.swift in Sources */,

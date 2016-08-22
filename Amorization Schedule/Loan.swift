@@ -10,14 +10,14 @@ import UIKit
 import CoreData
 
 class Loan {
-    private var _amount: Double = 0.0
-    private var _interest: Double = 0.0
-    private var _payments: Double = 0.0
-    private var _payment_amount: Double = 0.0
+    private var _amount: Double?
+    private var _interest: Double?
+    private var _payments: Double?
+    private var _payment_amount: Double?
     
     var amount: Double {
         get {
-            return _amount
+            return grabAmount()
         }
         set {
             _amount = newValue
@@ -26,7 +26,7 @@ class Loan {
     
     var interest: Double {
         get {
-            return _interest
+            return grabInterest()
         }
         set {
             _interest = newValue
@@ -35,7 +35,7 @@ class Loan {
     
     var payments: Double {
         get {
-            return _payments
+            return grabPayments()
         }
         set {
             _payments = newValue
@@ -44,38 +44,85 @@ class Loan {
     
     var payment_amount: Double {
         get {
-            return _payment_amount
+            return grabPaymentAmount()
         }
         set {
             _payment_amount = newValue
         }
     }
     
-    init(amount: Double, interest: Double, payments: Double, payment_amount: Double) {
-        _amount = amount
-        _interest = interest
-        _payments = payments
-        _payment_amount = payment_amount
+    func grabAmount() -> Double {
+        if let amount = _amount {
+            
+            return amount
+        } else if let A = _payment_amount, var i = _interest, let n = _payments {
+            i = i * 0.01 / 12
+            let P = (A - A * pow((i + 1), -n)) / i
+            return round(100 * P) / 100
+        }
+        return 0.0
     }
     
-    
-    func save() {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-       
-        let newLoan = NSEntityDescription.insertNewObject(forEntityName: "Loan", into: context)
-        
-        newLoan.setValue(_amount, forKey: "amount")
-        newLoan.setValue(_interest, forKey: "interest")
-        newLoan.setValue(_payments, forKey: "payments")
-        newLoan.setValue(_payment_amount, forKey: "payment_amount")
-        
-        do {
-            try newLoan.managedObjectContext?.save()
-        } catch {
-            print(error)
+    func grabInterest() -> Double {
+        if let interest = _interest {
+            return interest
+        } else if let P = _payment_amount, let A = _amount, let N = _payments {
+            let q = log((1 + 1 / N)) / log(2)
+            let i = pow((pow((1.0 + (P/A)), (1.0/q)) - 1.0), q) - 1
+            return round(100 * i * 100 * 12) / 100
         }
-        
+        return 0.0
+    }
+    
+    func grabPayments() -> Double {
+        if let payments = _payments {
+            return payments
+        }
+        else if let i = _interest, let A = _amount, let P = _payment_amount {
+            let N = -(log((1-i*A/P)) / log((1 + i)))
+            return round(100 * N) / 100
+        }
+        return 0.0
+    }
+    
+    func grabPaymentAmount() -> Double {
+        if let payment_amount = _payment_amount {
+            return payment_amount
+        } else if let i = _interest, let A = _amount, let N = _payments {
+            let P = (i*A) / (1-pow((1+i), -N))
+            return round(100 * P) / 100
+        }
+        return 0.0
     }
     
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
