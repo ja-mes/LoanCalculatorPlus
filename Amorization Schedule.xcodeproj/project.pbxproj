@@ -161,8 +161,8 @@
 			children = (
 				9B8329961D638CCA0008AA84 /* AddViewController.swift */,
 				9BA08EC91D668C700002717F /* ResultViewController.swift */,
-				9B8329D21D63F8C30008AA84 /* NavViewController.swift */,
 				9B8B541E1D6E3A3800F0CD4D /* ScheduleTableViewController.swift */,
+				9B8329D21D63F8C30008AA84 /* NavViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";

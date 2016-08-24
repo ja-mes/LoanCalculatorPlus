@@ -17,7 +17,6 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var interestRate: UILabel!
     @IBOutlet weak var totalAmount: UILabel!
     
-    
     // MARK: Properties
     private var _loan: Loan!
     
@@ -55,5 +54,16 @@ class ResultViewController: UIViewController {
         }
 
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? ScheduleTableViewController {
+            if let loan = sender as? Loan {
+                destination.loan = loan
+            }
+        }
+    }
 
+    @IBAction func viewAmorizationTable(_ sender: AnyObject) {
+        performSegue(withIdentifier: "ScheduleTableViewController", sender: loan)
+    }
 }
