@@ -54,7 +54,7 @@ class Loan {
     
     var total_amount: Double {
         
-        return round(100 * payment_amount * payments) / 100
+        return payment_amount * payments
     }
     
     func grabAmount() -> Double {
