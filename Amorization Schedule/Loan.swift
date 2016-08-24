@@ -18,7 +18,15 @@ class Loan {
     
     var amount: Double {
         get {
-            return grabAmount()
+            if let amount = _amount {
+                return amount
+            } else if let A = _payment_amount, var i = _interest, let n = _payments {
+                i = i * 0.01 / 12
+                
+                let P = (A - A * pow((i + 1), -n)) / i
+                return P
+            }
+            return 0.0
         }
         set {
             _amount = newValue
@@ -27,7 +35,17 @@ class Loan {
     
     var interest: Double {
         get {
-            return grabInterest()
+            if let interest = _interest {
+                return interest
+            } else if let N = _payments, let P = _payment_amount, let A = _amount {
+                let q = log((1 + 1 / N)) / log(2)
+                
+                let i = pow((pow((1.0 + (P/A)), (1.0/q)) - 1.0), q) - 1
+                
+                return i * 100 * 12
+            }
+            
+            return 0.0
         }
         set {
             _interest = newValue
@@ -36,7 +54,19 @@ class Loan {
     
     var payments: Double {
         get {
-            return grabPayments()
+            if let payments = _payments {
+                return payments
+            }
+            else if var i = _interest, let A  = _amount, let P = _payment_amount {
+                i = i * 0.01 / 12
+                
+                let N = -(log((1-i*A/P)) / log((1 + i)))
+                
+                return N
+                
+            }
+            
+            return 0.0
         }
         set {
             _payments = newValue
@@ -45,70 +75,25 @@ class Loan {
     
     var payment_amount: Double {
         get {
-            return grabPaymentAmount()
+            if let payment_amount = _payment_amount {
+                return payment_amount
+            } else if var i = _interest, let A = _amount, let N = _payments {
+                i = i * 0.01 / 12
+                let P = (i*A) / (1-pow((1+i), -N))
+                return P
+            }
+            
+            return 0.0
+
         }
         set {
             _payment_amount = newValue
         }
     }
     
+    
     var total_amount: Double {
-        
         return payment_amount * payments
-    }
-    
-    func grabAmount() -> Double {
-        if let amount = _amount {
-            return amount
-        } else if let A = _payment_amount, var i = _interest, let n = _payments {
-            i = i * 0.01 / 12
-                
-            let P = (A - A * pow((i + 1), -n)) / i
-            return P
-        }
-        return 0.0
-    }
-    
-    func grabInterest() -> Double {
-        if let interest = _interest {
-            return interest
-        } else if let N = _payments, let P = _payment_amount, let A = _amount {
-            let q = log((1 + 1 / N)) / log(2)
-            
-            let i = pow((pow((1.0 + (P/A)), (1.0/q)) - 1.0), q) - 1
-            
-            return i * 100 * 12
-        }
-        
-        return 0.0
-    }
-    
-    func grabPayments() -> Double {
-        if let payments = _payments {
-            return payments
-        }
-        else if var i = _interest, let A  = _amount, let P = _payment_amount {
-            i = i * 0.01 / 12
-            
-            let N = -(log((1-i*A/P)) / log((1 + i)))
-            
-            return N
-            
-        }
-        
-        return 0.0
-    }
-    
-    func grabPaymentAmount() -> Double {
-        if let payment_amount = _payment_amount {
-            return payment_amount
-        } else if var i = _interest, let A = _amount, let N = _payments {
-            i = i * 0.01 / 12
-            let P = (i*A) / (1-pow((1+i), -N))
-            return P
-        }
-        
-        return 0.0
     }
     
     

@@ -51,7 +51,7 @@ class ResultViewController: UIViewController {
         if floor(val) == val {
             return "\(Int(val))"
         } else {
-            return "\(val)"
+            return "\(round(100 * val) / 100)"
         }
 
     }
