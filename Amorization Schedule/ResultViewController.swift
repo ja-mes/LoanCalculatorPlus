@@ -15,6 +15,7 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var loanAmount: UILabel!
     @IBOutlet weak var numMonths: UILabel!
     @IBOutlet weak var interestRate: UILabel!
+    @IBOutlet weak var totalAmount: UILabel!
     
     
     // MARK: Properties
@@ -41,6 +42,8 @@ class ResultViewController: UIViewController {
         
         interestRate.text = "\(dblAsInt(val: loan.interest))%"
         numMonths.text = dblAsInt(val: loan.payments)
+        
+        totalAmount.text = formatter.string(from: NSNumber(value: loan.total_amount))
 
     }
     
