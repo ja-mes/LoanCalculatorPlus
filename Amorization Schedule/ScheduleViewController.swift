@@ -23,11 +23,34 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
+    private var schedule = [Dictionary<String, String>]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         table.delegate = self
         table.dataSource = self
+        
+        var balanceRemaining = loan.amount
+        
+        for N in 1...Int(loan.payments) {
+            let A = round(100 * loan.payment_amount) / 100
+            let R = loan.interest * 0.01 / 12
+            let I = round(100 * balanceRemaining * R) / 100
+            let P = A - I
+            
+            balanceRemaining -= P
+            
+            var payment = Dictionary<String, String>()
+            payment["N"] = "\(N)"
+            payment["A"] = "\(round(100 * A) / 100)"
+            payment["R"] = "\(round(100 * R) / 100)"
+            payment["I"] = "\(round(100 * I) / 100)"
+            payment["P"] = "\(round(100 * P) / 100)"
+            payment["B"] = "\(round(100 * balanceRemaining) / 100)"
+            
+            schedule.append(payment)
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -35,12 +58,19 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return Int(loan.payments)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "TextCell") as? ScheduleTableViewCell {
-            cell.paymentNum.text = "5"
+            let payment = schedule[indexPath.row]
+            
+            cell.paymentNum.text = payment["N"]
+            cell.paymentAmount.text = payment["A"]
+            cell.interestAmount.text = payment["I"]
+            cell.principleAmount.text = payment["P"]
+            cell.balanceAmount.text = payment["B"]
+            
             return cell
         }
         
