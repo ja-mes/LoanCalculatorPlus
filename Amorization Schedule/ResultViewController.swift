@@ -56,7 +56,7 @@ class ResultViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? ScheduleTableViewController {
+        if let destination = segue.destination as? ScheduleViewController {
             if let loan = sender as? Loan {
                 destination.loan = loan
             }
@@ -64,6 +64,6 @@ class ResultViewController: UIViewController {
     }
 
     @IBAction func viewAmorizationTable(_ sender: AnyObject) {
-        performSegue(withIdentifier: "ScheduleTableViewController", sender: loan)
+        performSegue(withIdentifier: "ScheduleViewController", sender: loan)
     }
 }

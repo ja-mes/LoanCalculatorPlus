@@ -18,7 +18,8 @@
 		9B8329CF1D63F5D10008AA84 /* AddTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8329CE1D63F5D10008AA84 /* AddTextField.swift */; };
 		9B8329D31D63F8C30008AA84 /* NavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8329D21D63F8C30008AA84 /* NavViewController.swift */; };
 		9B8329D51D64860D0008AA84 /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8329D41D64860D0008AA84 /* Loan.swift */; };
-		9B8B541F1D6E3A3800F0CD4D /* ScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B541E1D6E3A3800F0CD4D /* ScheduleTableViewController.swift */; };
+		9B8B543D1D73688200F0CD4D /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B543C1D73688200F0CD4D /* ScheduleViewController.swift */; };
+		9B8B543F1D736F2E00F0CD4D /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B543E1D736F2E00F0CD4D /* ScheduleTableViewCell.swift */; };
 		9BA08ECA1D668C700002717F /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA08EC91D668C700002717F /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +58,8 @@
 		9B8329CE1D63F5D10008AA84 /* AddTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTextField.swift; sourceTree = "<group>"; };
 		9B8329D21D63F8C30008AA84 /* NavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavViewController.swift; sourceTree = "<group>"; };
 		9B8329D41D64860D0008AA84 /* Loan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
-		9B8B541E1D6E3A3800F0CD4D /* ScheduleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewController.swift; sourceTree = "<group>"; };
+		9B8B543C1D73688200F0CD4D /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		9B8B543E1D736F2E00F0CD4D /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		9BA08EC91D668C700002717F /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +116,7 @@
 				9B8329C71D63F2AC0008AA84 /* Controller */,
 				9B8329941D638CCA0008AA84 /* AppDelegate.swift */,
 				9B8329981D638CCA0008AA84 /* Main.storyboard */,
+				9B8B543E1D736F2E00F0CD4D /* ScheduleTableViewCell.swift */,
 				9B83299E1D638CCA0008AA84 /* Assets.xcassets */,
 				9B8329A01D638CCA0008AA84 /* LaunchScreen.storyboard */,
 				9B8329A31D638CCA0008AA84 /* Info.plist */,
@@ -161,8 +164,8 @@
 			children = (
 				9B8329961D638CCA0008AA84 /* AddViewController.swift */,
 				9BA08EC91D668C700002717F /* ResultViewController.swift */,
-				9B8B541E1D6E3A3800F0CD4D /* ScheduleTableViewController.swift */,
 				9B8329D21D63F8C30008AA84 /* NavViewController.swift */,
+				9B8B543C1D73688200F0CD4D /* ScheduleViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -301,14 +304,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B8B541F1D6E3A3800F0CD4D /* ScheduleTableViewController.swift in Sources */,
 				9B8329CF1D63F5D10008AA84 /* AddTextField.swift in Sources */,
 				9B8329971D638CCA0008AA84 /* AddViewController.swift in Sources */,
 				9BA08ECA1D668C700002717F /* ResultViewController.swift in Sources */,
+				9B8B543D1D73688200F0CD4D /* ScheduleViewController.swift in Sources */,
 				9B8329D51D64860D0008AA84 /* Loan.swift in Sources */,
 				9B8329951D638CCA0008AA84 /* AppDelegate.swift in Sources */,
 				9B8329D31D63F8C30008AA84 /* NavViewController.swift in Sources */,
 				9B83299D1D638CCA0008AA84 /* Amorization_Schedule.xcdatamodeld in Sources */,
+				9B8B543F1D736F2E00F0CD4D /* ScheduleTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
