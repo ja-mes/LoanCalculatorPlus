@@ -32,22 +32,30 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
         table.dataSource = self
         
         var balanceRemaining = loan.amount
+        let payments = Int(ceil(loan.payments))
         
-        for N in 1...Int(loan.payments) {
-            let A = round(100 * loan.payment_amount) / 100
+        for N in 1...payments {
+            var A = round(100 * loan.payment_amount) / 100
             let R = loan.interest * 0.01 / 12
             let I = round(100 * balanceRemaining * R) / 100
-            let P = A - I
+            var P = A - I
+            
+            if N == payments {
+                P = round(100 * balanceRemaining) / 100
+                A = P + I
+            }
             
             balanceRemaining -= P
             
+            let formatter = NumberFormatter()
+            formatter.numberStyle = .currency
+            
             var payment = Dictionary<String, String>()
             payment["N"] = "\(N)"
-            payment["A"] = "\(round(100 * A) / 100)"
-            payment["R"] = "\(round(100 * R) / 100)"
-            payment["I"] = "\(round(100 * I) / 100)"
-            payment["P"] = "\(round(100 * P) / 100)"
-            payment["B"] = "\(round(100 * balanceRemaining) / 100)"
+            payment["A"] = formatter.string(from: NSNumber(value: A))
+            payment["I"] = formatter.string(from: NSNumber(value: I))
+            payment["P"] = formatter.string(from: NSNumber(value: P))
+            payment["B"] = formatter.string(from: NSNumber(value: balanceRemaining))
             
             schedule.append(payment)
         }
