@@ -35,17 +35,19 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
         let payments = Int(ceil(loan.payments))
         
         for N in 1...payments {
-            var A = round(100 * loan.payment_amount) / 100
+            var A = loan.payment_amount
             let R = loan.interest * 0.01 / 12
-            let I = round(100 * balanceRemaining * R) / 100
+            let I = balanceRemaining * R
             var P = A - I
             
             if N == payments {
-                P = round(100 * balanceRemaining) / 100
+                P = balanceRemaining
                 A = P + I
             }
             
+            
             balanceRemaining -= P
+            
             
             let formatter = NumberFormatter()
             formatter.numberStyle = .currency
