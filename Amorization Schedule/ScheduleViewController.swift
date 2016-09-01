@@ -32,6 +32,8 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
         table.dataSource = self
         
         var balanceRemaining = loan.amount
+        
+        // TODO: add case for where payments is a decimal
         let payments = Int(ceil(loan.payments))
         
         for N in 1...payments {
@@ -43,6 +45,7 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
             if N == payments {
                 P = balanceRemaining
                 A = P + I
+                
             }
             
             
