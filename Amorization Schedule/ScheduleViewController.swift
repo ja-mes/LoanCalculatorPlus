@@ -32,9 +32,11 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
         table.dataSource = self
         
         var balanceRemaining = loan.amount
-        
-        // TODO: add case for where payments is a decimal
         let payments = Int(ceil(loan.payments))
+        
+        
+        print(payments)
+        print(1...payments)
         
         for N in 1...payments {
             var A = loan.payment_amount
@@ -43,6 +45,7 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
             var P = A - I
             
             if N == payments {
+                
                 P = balanceRemaining
                 A = P + I
                 
@@ -64,6 +67,8 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
             
             schedule.append(payment)
         }
+        
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -71,7 +76,7 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Int(loan.payments)
+        return Int(ceil(loan.payments))
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
