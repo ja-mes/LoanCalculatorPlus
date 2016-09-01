@@ -32,7 +32,7 @@ class AddViewController: UIViewController {
         }
     }
 
-    @IBAction func calculate(_ sender: AnyObject) {
+    @IBAction func calculate(_ sender: UIButton) {
         var numFilled = 0
         
         let loan = Loan()
@@ -59,9 +59,12 @@ class AddViewController: UIViewController {
         
         if numFilled < 3 {
             instructionLabel.textColor = UIColor.red
+            instructionLabel.font = UIFont(name: "AvenirNext-Medium", size: 15)!
+            shakeAnimation(view: sender)
             
-            // TODO: Add button animation
         } else {
+            instructionLabel.textColor = #colorLiteral(red: 0.6078431373, green: 0.6078431373, blue: 0.6078431373, alpha: 1)
+            instructionLabel.font = UIFont(name: "Avenir Next", size: 15)!
             performSegue(withIdentifier: "ResultViewController", sender: loan)
         }
     }
@@ -74,6 +77,18 @@ class AddViewController: UIViewController {
         }
         
         return nil
+    }
+    
+    func shakeAnimation(view: UIView) {
+        let animation = CABasicAnimation(keyPath: "position")
+        animation.duration = 0.07
+        animation.repeatCount = 3
+        animation.autoreverses = true
+        
+        animation.fromValue = NSValue(cgPoint: CGPoint(x: view.center.x - 15, y: view.center.y))
+        animation.toValue = NSValue(cgPoint: CGPoint(x: view.center.x + 15, y: view.center.y))
+        view.layer.add(animation, forKey: "position")
+
     }
     
     
