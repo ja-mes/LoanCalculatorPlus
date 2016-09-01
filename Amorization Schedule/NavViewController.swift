@@ -13,6 +13,7 @@ class NavViewController: UINavigationController, UIViewControllerTransitioningDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationBar.barStyle = .blackTranslucent
         self.navigationBar.tintColor = UIColor.white
         self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont(name: "Avenir Next", size: 20)!]
 
