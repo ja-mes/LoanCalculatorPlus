@@ -93,7 +93,12 @@ class Loan {
     
     
     var total_amount: Double {
-        return payment_amount * payments
+        if var i = _interest, let A = _amount, let N = _payments {
+            i = i * 0.01 / 12
+            let P = (i*A) / (1-pow((1+i), -N))
+            return P * payments
+        }
+        return 0.0
     }
     
     
