@@ -225,7 +225,7 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i1x-Pf-Qkm">
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Y0E-NO-QSy">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Y0E-NO-QSy">
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="q7H-vv-Lzj">
                                                         <subviews>
@@ -332,8 +332,7 @@
                                             <constraint firstAttribute="height" constant="500" id="Nqd-9y-Lie"/>
                                             <constraint firstItem="SNW-UX-rPr" firstAttribute="top" secondItem="Y0E-NO-QSy" secondAttribute="bottom" constant="40" id="ROx-XM-rVe"/>
                                             <constraint firstItem="e2v-Vf-Cdf" firstAttribute="top" secondItem="SNW-UX-rPr" secondAttribute="bottom" constant="70" id="ara-Zr-l7V"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="Y0E-NO-QSy" secondAttribute="trailing" constant="16" id="hMI-To-h48"/>
-                                            <constraint firstItem="Y0E-NO-QSy" firstAttribute="leading" secondItem="i1x-Pf-Qkm" secondAttribute="leadingMargin" constant="16" id="qkq-9m-KG8"/>
+                                            <constraint firstItem="Y0E-NO-QSy" firstAttribute="centerX" secondItem="i1x-Pf-Qkm" secondAttribute="centerX" id="lbN-Z9-Lq3"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -509,7 +508,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Azv-Ci-1fi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="421" y="135"/>
+            <point key="canvasLocation" x="241" y="134"/>
         </scene>
     </scenes>
     <resources>

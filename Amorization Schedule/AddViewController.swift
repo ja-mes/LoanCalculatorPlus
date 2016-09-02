@@ -61,6 +61,17 @@ class AddViewController: UIViewController, UITextFieldDelegate {
             loan.payment_amount = paymentAmount
         }
         
+        
+        if loan.payments.isNaN {
+            let alertController = UIAlertController(title: "Unable to calculate # months", message: "These values would resulte in a infinite # of months.", preferredStyle: UIAlertControllerStyle.alert)
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action) in
+                self.dismiss(animated: true, completion: nil)
+            })
+            
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
+        
         if numFilled < 3 {
             instructionLabel.textColor = UIColor.red
             instructionLabel.font = UIFont(name: "AvenirNext-Medium", size: 15)!
