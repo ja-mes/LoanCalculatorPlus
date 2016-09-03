@@ -43,6 +43,16 @@ class ResultViewController: UIViewController {
         numMonths.text = dblAsInt(val: loan.payments)
         
         totalAmount.text = formatter.string(from: NSNumber(value: loan.total_amount))
+        
+        if loan.interest < 0 {
+            let alertController = UIAlertController(title: "Interest rate is negative", message: "You probably don't wont that. You might want to change some values", preferredStyle: UIAlertControllerStyle.alert)
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action) in
+                self.dismiss(animated: true, completion: nil)
+            })
+            
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
 
     }
     

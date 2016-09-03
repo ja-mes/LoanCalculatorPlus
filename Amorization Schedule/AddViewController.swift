@@ -70,9 +70,9 @@ class AddViewController: UIViewController, UITextFieldDelegate {
             
             alertController.addAction(okAction)
             self.present(alertController, animated: true, completion: nil)
+
         }
-        
-        if numFilled < 3 {
+        else if numFilled < 3 {
             instructionLabel.textColor = UIColor.red
             instructionLabel.font = UIFont(name: "AvenirNext-Medium", size: 15)!
             shakeAnimation(view: sender)
@@ -81,8 +81,12 @@ class AddViewController: UIViewController, UITextFieldDelegate {
             instructionLabel.textColor = #colorLiteral(red: 0.6078431373, green: 0.6078431373, blue: 0.6078431373, alpha: 1)
             instructionLabel.font = UIFont(name: "Avenir Next", size: 15)!
             performSegue(withIdentifier: "ResultViewController", sender: loan)
+
         }
     }
+    
+    
+    // MARK: functions
     
     func checkField(val: String?) -> Double? {
         if let unwrapedVal = val {
@@ -105,6 +109,9 @@ class AddViewController: UIViewController, UITextFieldDelegate {
         view.layer.add(animation, forKey: "position")
 
     }
+    
+    
+    // MARK: keyboard
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()

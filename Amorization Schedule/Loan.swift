@@ -9,6 +9,9 @@
 import UIKit
 import CoreData
 
+
+// FIXME: Sometimes interest rate is negative
+
 class Loan {
     private var _amount: Double?
     private var _interest: Double?
