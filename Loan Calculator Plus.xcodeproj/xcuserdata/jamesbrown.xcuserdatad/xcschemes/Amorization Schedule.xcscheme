@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9B8329901D638CCA0008AA84"
-               BuildableName = "Calc Loan Plus.app"
-               BlueprintName = "Calc Loan Plus"
-               ReferencedContainer = "container:Calc Loan Plus.xcodeproj">
+               BuildableName = "Loan Calculator Plus.app"
+               BlueprintName = "Loan Calculator Plus"
+               ReferencedContainer = "container:Loan Calculator Plus.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9B8329A71D638CCA0008AA84"
-               BuildableName = "Calc Loan PlusTests.xctest"
-               BlueprintName = "Calc Loan PlusTests"
-               ReferencedContainer = "container:Calc Loan Plus.xcodeproj">
+               BuildableName = "Loan Calculator PlusTests.xctest"
+               BlueprintName = "Loan Calculator PlusTests"
+               ReferencedContainer = "container:Loan Calculator Plus.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9B8329B21D638CCA0008AA84"
-               BuildableName = "Calc Loan PlusUITests.xctest"
-               BlueprintName = "Calc Loan PlusUITests"
-               ReferencedContainer = "container:Calc Loan Plus.xcodeproj">
+               BuildableName = "Loan Calculator PlusUITests.xctest"
+               BlueprintName = "Loan Calculator PlusUITests"
+               ReferencedContainer = "container:Loan Calculator Plus.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9B8329901D638CCA0008AA84"
-            BuildableName = "Calc Loan Plus.app"
-            BlueprintName = "Calc Loan Plus"
-            ReferencedContainer = "container:Calc Loan Plus.xcodeproj">
+            BuildableName = "Loan Calculator Plus.app"
+            BlueprintName = "Loan Calculator Plus"
+            ReferencedContainer = "container:Loan Calculator Plus.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9B8329901D638CCA0008AA84"
-            BuildableName = "Calc Loan Plus.app"
-            BlueprintName = "Calc Loan Plus"
-            ReferencedContainer = "container:Calc Loan Plus.xcodeproj">
+            BuildableName = "Loan Calculator Plus.app"
+            BlueprintName = "Loan Calculator Plus"
+            ReferencedContainer = "container:Loan Calculator Plus.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9B8329901D638CCA0008AA84"
-            BuildableName = "Calc Loan Plus.app"
-            BlueprintName = "Calc Loan Plus"
-            ReferencedContainer = "container:Calc Loan Plus.xcodeproj">
+            BuildableName = "Loan Calculator Plus.app"
+            BlueprintName = "Loan Calculator Plus"
+            ReferencedContainer = "container:Loan Calculator Plus.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
