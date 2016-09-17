@@ -10,7 +10,7 @@
 		9B8329951D638CCA0008AA84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8329941D638CCA0008AA84 /* AppDelegate.swift */; };
 		9B8329971D638CCA0008AA84 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8329961D638CCA0008AA84 /* AddViewController.swift */; };
 		9B83299A1D638CCA0008AA84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8329981D638CCA0008AA84 /* Main.storyboard */; };
-		9B83299D1D638CCA0008AA84 /* Amorization_Schedule.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B83299B1D638CCA0008AA84 /* Amorization_Schedule.xcdatamodeld */; };
+		9B83299D1D638CCA0008AA84 /* LoanCalculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B83299B1D638CCA0008AA84 /* LoanCalculator.xcdatamodeld */; };
 		9B83299F1D638CCA0008AA84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B83299E1D638CCA0008AA84 /* Assets.xcassets */; };
 		9B8329A21D638CCA0008AA84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8329A01D638CCA0008AA84 /* LaunchScreen.storyboard */; };
 		9B8329AD1D638CCA0008AA84 /* LoanCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8329AC1D638CCA0008AA84 /* LoanCalculatorTests.swift */; };
@@ -45,7 +45,7 @@
 		9B8329941D638CCA0008AA84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B8329961D638CCA0008AA84 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		9B8329991D638CCA0008AA84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9B83299C1D638CCA0008AA84 /* Amorization_Schedule.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Amorization_Schedule.xcdatamodel; sourceTree = "<group>"; };
+		9B83299C1D638CCA0008AA84 /* LoanCalculator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LoanCalculator.xcdatamodel; sourceTree = "<group>"; };
 		9B83299E1D638CCA0008AA84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B8329A11D638CCA0008AA84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B8329A31D638CCA0008AA84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 				9B83299E1D638CCA0008AA84 /* Assets.xcassets */,
 				9B8329A01D638CCA0008AA84 /* LaunchScreen.storyboard */,
 				9B8329A31D638CCA0008AA84 /* Info.plist */,
-				9B83299B1D638CCA0008AA84 /* Amorization_Schedule.xcdatamodeld */,
+				9B83299B1D638CCA0008AA84 /* LoanCalculator.xcdatamodeld */,
 			);
 			name = "Loan Calculator Plus";
 			path = "Amorization Schedule";
@@ -315,7 +315,7 @@
 				9B8329D51D64860D0008AA84 /* Loan.swift in Sources */,
 				9B8329951D638CCA0008AA84 /* AppDelegate.swift in Sources */,
 				9B8329D31D63F8C30008AA84 /* NavViewController.swift in Sources */,
-				9B83299D1D638CCA0008AA84 /* Amorization_Schedule.xcdatamodeld in Sources */,
+				9B83299D1D638CCA0008AA84 /* LoanCalculator.xcdatamodeld in Sources */,
 				9B8B543F1D736F2E00F0CD4D /* ScheduleTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -598,13 +598,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		9B83299B1D638CCA0008AA84 /* Amorization_Schedule.xcdatamodeld */ = {
+		9B83299B1D638CCA0008AA84 /* LoanCalculator.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				9B83299C1D638CCA0008AA84 /* Amorization_Schedule.xcdatamodel */,
+				9B83299C1D638CCA0008AA84 /* LoanCalculator.xcdatamodel */,
 			);
-			currentVersion = 9B83299C1D638CCA0008AA84 /* Amorization_Schedule.xcdatamodel */;
-			path = Amorization_Schedule.xcdatamodeld;
+			currentVersion = 9B83299C1D638CCA0008AA84 /* LoanCalculator.xcdatamodel */;
+			path = LoanCalculator.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
